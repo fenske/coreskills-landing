@@ -6,6 +6,7 @@ module.exports = {
       content: [
         './public/index.html',
         './public/pricing.html',
+        './public/faq.html',
       ],
       defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
     }),
