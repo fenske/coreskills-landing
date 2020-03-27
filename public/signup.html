@@ -11,6 +11,7 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js"
       defer
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Hero section -->
     <div class="relative bg-gray-50 overflow-hidden">
@@ -166,215 +167,36 @@
     </div>
     <!-- Hero section ends -->
 
-    <!-- FAQ section -->
-
-    <div class="bg-gray-50" x-data="{ openPanel: 1 }">
-      <div class="max-w-screen-xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto">
-          <h2
-            class="text-center text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-          >
-            Frequently asked questions
-          </h2>
-          <div class="mt-6 border-t-2 border-gray-200 pt-6">
-            <dl>
-              <div>
-                <dt class="text-lg leading-7">
-                  <button
-                    @click="openPanel = (openPanel === 1 ? null : 1)"
-                    class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900"
-                  >
-                    <span class="font-medium text-gray-900">
-                      What's a pragmatic interview and why should I care?
-                    </span>
-                    <span class="ml-6 h-7 flex items-center">
-                      <svg
-                        class="h-6 w-6 transform"
-                        :class="{ '-rotate-180': openPanel === 1 }"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </dt>
-                <dd class="mt-2 pr-12" x-show="openPanel === 1">
-                  <p class="text-base leading-6 text-gray-500">
-                    A pragmatic interview is one that tests one's ability to do a job at hand
-                    via an assignment that closely resembles a day-to-day task.
-                    <br/>
-                    <br/>
-                    We at CoreSkills believe that this way it saves a lot of time and energy
-                    for everyone involved in the hiring process.
-                    <br/>
-                    <br/>
-                    Here is how CoreSkills makes coding interviews pragmatic:
-                    <ol class="text-base leading-6 text-gray-500">
-                      <li>For each of your open positions, we help you prepare a customized coding assignment using the <a href="https://github.com/coreskills/challenge-library">CoreSkills challenge library</a>.</li>
-                      <li>We provide your candidates will all the tools and support they need during their interviews so that most of them complete their assignments.</li>
-                      <li>Once the assignment is completed, we prepare a candidate skills profile that you get together with the candidate's code to help you make a better hiring decision.</li>
-                    </ol>
-                  </p>
-                </dd>
-              </div>
-              <div class="mt-6 border-t border-gray-200 pt-6">
-                <div>
-                  <dt class="text-lg leading-7">
-                    <button
-                      @click="openPanel = (openPanel === 2 ? null : 2)"
-                      class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900"
-                    >
-                      <span class="font-medium text-gray-900">
-                        What roles can I evaluate for using CoreSkills?
-                      </span>
-                      <span class="ml-6 h-7 flex items-center">
-                        <svg
-                          class="h-6 w-6 transform"
-                          :class="{ '-rotate-180': openPanel === 2 }"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </dt>
-                  <dd class="mt-2 pr-12" x-show="openPanel === 2">
-                    <p class="text-base leading-6 text-gray-500">
-                      As of today, CoreSkills allows you to conduct Backend and Fullstack coding interviews ranging from Junior to Senior roles.
-                      We're planning to expand on available types of challenges later in 2020.
-                    </p>
-                  </dd>
-                </div>
-              </div>
-              <div class="mt-6 border-t border-gray-200 pt-6">
-                <div>
-                  <dt class="text-lg leading-7">
-                    <button
-                      @click="openPanel = (openPanel === 3 ? null : 3)"
-                      class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900"
-                    >
-                      <span class="font-medium text-gray-900">
-                        What programming languages are available?
-                      </span>
-                      <span class="ml-6 h-7 flex items-center">
-                        <svg
-                          class="h-6 w-6 transform"
-                          :class="{ '-rotate-180': openPanel === 3 }"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </dt>
-                  <dd class="mt-2 pr-12" x-show="openPanel === 3">
-                    <p class="text-base leading-6 text-gray-500">
-                      As of today, the CoreSkills interiew is language-agnostic.
-                    </p>
-                  </dd>
-                </div>
-              </div>
-              <div class="mt-6 border-t border-gray-200 pt-6">
-                <div>
-                  <dt class="text-lg leading-7">
-                    <button
-                      @click="openPanel = (openPanel === 4 ? null : 4)"
-                      class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900"
-                    >
-                      <span class="font-medium text-gray-900">
-                        Why is the CoreSkills challenge library open sourced?
-                      </span>
-                      <span class="ml-6 h-7 flex items-center">
-                        <svg
-                          class="h-6 w-6 transform"
-                          :class="{ '-rotate-180': openPanel === 4 }"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </dt>
-                  <dd class="mt-2 pr-12" x-show="openPanel === 4">
-                    <p class="text-base leading-6 text-gray-500">
-                      There are 2 main reasons for this. 
-                      First, we believe that everyone should be able to understand what makes a pragmatic interview. 
-                      And second, we would like to provide everyone with a chance to contribute to the definition of pragmatic.
-                    </p>
-                  </dd>
-                </div>
-              </div>
-              <div class="mt-6 border-t border-gray-200 pt-6">
-                <div>
-                  <dt class="text-lg leading-7">
-                    <button
-                      @click="openPanel = (openPanel === 5 ? null : 5)"
-                      class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900"
-                    >
-                      <span class="font-medium text-gray-900">
-                        How does CoreSkills fit into my hiring process?
-                      </span>
-                      <span class="ml-6 h-7 flex items-center">
-                        <svg
-                          class="h-6 w-6 transform"
-                          :class="{ '-rotate-180': openPanel === 5 }"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </dt>
-                  <dd class="mt-2 pr-12" x-show="openPanel === 5">
-                    <p class="text-base leading-6 text-gray-500">
-                      The CoreSkills interview is supposed to replace most of your pre-onsite technical interviews. 
-                      It gives you a clear picture of whether your candidate has the tech competence you're looking for. 
-                      And additionally, it provides you with an understanding of what to follow-up on during the on-site interview.
-                    </p>
-                  </dd>
-                </div>
-              </div>
-            </dl>
+    <!-- Signup section -->
+    <div class="bg-white">
+      <div class="max-w-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        <h2
+          class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        >
+          Thanks for your interest!
+          <br class="hidden sm:inline" />
+          <span class="text-indigo-600">Sign up for early access.</span>
+        </h2>
+        <form id="form" class="mt-8 sm:flex">
+          <input
+            id="email_address"
+            aria-label="Email address"
+            type="email"
+            required
+            class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
+            placeholder="Enter your email"
+          />
+          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+            <button
+              class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+            >
+              Sign up
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
-    <!-- FAQ ends -->
+    <!-- Signup ends -->
 
     <!-- Footer -->
     <div class="bg-white">
@@ -446,5 +268,24 @@
       </div>
     </div>
     <!-- Footer ends -->
+
+    <script>
+      function signup(event) {
+        let emailAddress = document.getElementById("email_address").value;
+        $.ajax({
+          type: "POST",
+          url: "https://functions.coreskills.dev/signUp",
+          data: {
+            emailAddress: emailAddress
+          },
+          contentType: "application/x-www-form-urlencoded"
+        }); 
+        // window.alert("Recorded! 🎉 We'll reach out! 💫");
+        // window.location.assign('/');
+        event.preventDefault();
+      }
+      const form = document.getElementById("form");
+      form.addEventListener("submit", signup);
+    </script>
   </body>
 </html>
