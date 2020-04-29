@@ -183,11 +183,38 @@
                     We at CoreSkills believe (and have seen) that this way it saves a lot of time and energy 
                     for everyone involved in the hiring process, avoids bias, and brings 
                     the desired hiring results.
-                    <br/>
-                    <br/>
-                    Here is how CoreSkills makes coding interviews pragmatic:
-                    <br/>
-                    <br/>
+                  </p>
+                </dd>
+              </div>
+              <div class="mt-6 border-t border-gray-200 pt-6">
+                <div>
+                  <dt class="text-lg leading-7">
+                    <button
+                      @click="openPanel = (openPanel === 6 ? null : 6)"
+                      class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900"
+                    >
+                      <span class="font-medium text-gray-900">
+                        How does CoreSkills work?
+                      </span>
+                      <span class="ml-6 h-7 flex items-center">
+                        <svg
+                          class="h-6 w-6 transform"
+                          :class="{ '-rotate-180': openPanel === 6 }"
+                          stroke="currentColor"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </dt>
+                  <dd class="mt-2 pr-12" x-show="openPanel === 6">
                     <ul class="text-base leading-6 text-gray-500">
                       <li class="flex items-start">
                         <div class="flex-shrink-0">
@@ -196,7 +223,9 @@
                           </svg>
                         </div>
                         <p class="ml-3">
-                          After listening to how you work and what profile you’re hiring for, we prepare a customized coding assignment.
+                          After listening to how you work and what profile you’re hiring for, we prepare a customized coding assignment based on our
+                          catalog of coding challenges. Each of the challenges is curated with an extensive user testing process and includes a necessary
+                          boilerplate and a standardized rubric to ensure evaluation consistency.
                         </p>
                       </li>
                       <li class="flex items-start">
@@ -230,8 +259,8 @@
                         </p>
                       </li>
                     </ul>
-                  </p>
-                </dd>
+                  </dd>
+                </div>
               </div>
               <div class="mt-6 border-t border-gray-200 pt-6">
                 <div>
